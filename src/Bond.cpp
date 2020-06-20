@@ -30,7 +30,7 @@ Bond::~Bond()
 
 void Bond::printData(std::ostream& os) const {
     os << "{\n";
-    kj::print(os, 
+    print(os, 
               "value", value,
               "name", name);
     os << "}";

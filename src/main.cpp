@@ -20,16 +20,16 @@ int main(int argc, char *argv[]) {
    std::map<std::string, int> f = {{"one", 1}, {"two", 2}};
    std::array<int, 3> g = {7, 8, 9};
 
-   kj::print(std::cout, "a", a,
-                        "b", b,
-                        "c", c);
+   print(std::cout, "a", a,
+                    "b", b,
+                    "c", c);
    
-   kj::print(std::cout, "d", d);
-   kj::print(std::cout, "e", e);
-   kj::print(std::cout, "f", f);
-   kj::print(std::cout, "g", g);
+   print(std::cout, "d", d);
+   print(std::cout, "e", e);
+   print(std::cout, "f", f);
+   print(std::cout, "g", g);
 
-   kj::print(std::cout, "bond_1", bond_1);
+   print(std::cout, "bond_1", bond_1);
 
    return 0;
 }

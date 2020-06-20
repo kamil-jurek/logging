@@ -67,3 +67,7 @@ namespace kj {
 
 } // kj
 
+template <typename Head, typename... Tail>
+void print(std::ostream& os, const std::string& attrName, const Head& head, Tail&&... tail) {
+    kj::print(os, attrName, head, tail...);
+}
