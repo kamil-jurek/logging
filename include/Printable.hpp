@@ -43,7 +43,7 @@ namespace kj {
 
     template <typename T1, typename T2>
     std::ostream& operator<<(std::ostream& os, const std::pair<T1, T2>& pair) {
-        return os << "{" << pair.first << "," << pair.second << "}";
+        return os << "{" << pair.first << ", " << pair.second << "}";
     }
 
     template <typename T1, typename T2>
@@ -56,7 +56,7 @@ namespace kj {
 
     template <typename T>
     void print(std::ostream& os, const std::string& attrName, const T& attr) {
-        os << attrName << " = " << attr << "\n";
+        os << attrName << " = " << attr << " ";
     }
 
     template <typename Head, typename... Tail>
@@ -70,4 +70,10 @@ namespace kj {
 template <typename Head, typename... Tail>
 void print(std::ostream& os, const std::string& attrName, const Head& head, Tail&&... tail) {
     kj::print(os, attrName, head, tail...);
+}
+
+template <typename T>
+void printNl(std::ostream& os, const std::string& attrName, const T& attr) {
+    kj::print(os, attrName, attr);
+    os << '\n';
 }

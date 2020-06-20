@@ -19,4 +19,5 @@ class Bond : public Investment, public Printable
 
   private:
     std::string name;
+    size_t x;
 };
