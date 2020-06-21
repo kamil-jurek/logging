@@ -5,6 +5,7 @@
 #include <map>
 
 #include "Bond.hpp"
+#include "KjUtils.hpp"
 
 int main(int argc, char *argv[]) {
 
@@ -27,7 +28,7 @@ int main(int argc, char *argv[]) {
                     "float_val", float_val);
    
    printNl(std::cout, "str_val", str_val);
-   printNl(std::cout, "evec_val", vec_val);
+   printNl(std::cout, "vec_val", vec_val);
    printNl(std::cout, "map_val", map_val);
    printNl(std::cout, "arr_val", arr_val);
    printNl(std::cout, "pair_val", pair_val);
@@ -35,6 +36,9 @@ int main(int argc, char *argv[]) {
    printNl(std::cout, "bond_1", bond_1);
 
    printNl(std::cout, "pair_vec", pair_vec);
+
+   TRACE("Bond trace: ", bond_1);
+   TRACE("Vector trace: ", vec_val);
 
    return 0;
 }

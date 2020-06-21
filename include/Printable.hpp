@@ -56,7 +56,7 @@ namespace kj {
 
     template <typename T>
     void print(std::ostream& os, const std::string& attrName, const T& attr) {
-        os << attrName << " = " << attr << " ";
+        os << attrName << " = " << attr << "; ";
     }
 
     template <typename Head, typename... Tail>
